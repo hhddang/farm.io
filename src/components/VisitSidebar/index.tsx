@@ -1,14 +1,14 @@
+import { usePetStore } from "../../hooks";
 import "./style.scss";
 
-const DATA = ["zoo-1", "zoo-2", "zoo-3"];
-
 export const VisitSidebar = () => {
+  const petStore = usePetStore();
   return (
     <div className="visit-sidebar">
       <div className="zoo-box-list">
-        {DATA.map((zoo, index) => (
-          <div className="zoo-box" key={index}>
-            <div className="zoo">{zoo}</div>
+        {petStore.petsInStock.map((pet, index) => (
+          <div className="zoo-box" key={index} onClick={() => petStore.moveToFarm(pet)}>
+            <div className="zoo" >{pet.id}</div>
           </div>
         ))}
       </div>

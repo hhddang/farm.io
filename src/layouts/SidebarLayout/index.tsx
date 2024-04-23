@@ -1,13 +1,15 @@
 import "./style.scss";
 import { type ISidebarLayout, SidebarType } from "./types";
 import { VisitSidebar, SidebarB, SidebarC } from "../../components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePetStore } from "../../hooks";
 
 export const SidebarLayout = ({ children }: ISidebarLayout) => {
   const [sidebarType, setSidebarType] = useState<SidebarType>(
     SidebarType.VISIT
   );
   const [hideSidebar, setHideSidebar] = useState<boolean>(false);
+  const petStore = usePetStore();
 
   const handleSetSidebarType = (sidebarType: SidebarType) => {
     setSidebarType(sidebarType);
@@ -19,6 +21,11 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
   const toggleSidebar = () => {
     setHideSidebar((state) => !state);
   };
+
+  useEffect(() => {
+    petStore.setPetsInStock([{ id: 'pet-1' }, { id: 'pet-2' }, { id: 'pet-3' }]);
+    petStore.setPetsInFarm([{ id: 'pet-4' }, { id: 'pet-5' }, { id: 'pet-6' }]);
+  }, []);
 
   return (
     <div className="sidebar-layout">

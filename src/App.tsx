@@ -1,11 +1,11 @@
 import "./App.css";
+import { Farm } from "./components";
 import { SidebarLayout } from "./layouts";
-import Background from "./assets/background.svg";
 
 function App() {
   return (
     <SidebarLayout>
-      <img src={Background} alt="background" className="background" />
+      <Farm />
     </SidebarLayout>
   );
 }
