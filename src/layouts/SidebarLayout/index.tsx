@@ -2,14 +2,17 @@ import "./style.scss";
 import { type ISidebarLayout, SidebarType } from "./types";
 import { VisitSidebar, SidebarB, SidebarC } from "../../components";
 import { useEffect, useState } from "react";
-import { usePetStore } from "../../hooks";
+import { setPetsInStock, setPetsInFarm } from "../../redux/features/petSlice";
+import { useDispatch } from "react-redux";
 
 export const SidebarLayout = ({ children }: ISidebarLayout) => {
+  const dispatch = useDispatch();
+
   const [sidebarType, setSidebarType] = useState<SidebarType>(
     SidebarType.VISIT
   );
+
   const [hideSidebar, setHideSidebar] = useState<boolean>(false);
-  const petStore = usePetStore();
 
   const handleSetSidebarType = (sidebarType: SidebarType) => {
     setSidebarType(sidebarType);
@@ -23,8 +26,12 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
   };
 
   useEffect(() => {
-    petStore.setPetsInStock([{ id: 'pet-1' }, { id: 'pet-2' }, { id: 'pet-3' }]);
-    petStore.setPetsInFarm([{ id: 'pet-4' }, { id: 'pet-5' }, { id: 'pet-6' }]);
+    dispatch(
+      setPetsInStock([{ id: "pet-1" }, { id: "pet-2" }, { id: "pet-3" }])
+    );
+    dispatch(
+      setPetsInFarm([{ id: "pet-4" }, { id: "pet-5" }, { id: "pet-6" }])
+    );
   }, []);
 
   return (
