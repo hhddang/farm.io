@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./styles/index.scss";
 import { Farm } from "./components";
 import { SidebarLayout } from "./layouts";
 

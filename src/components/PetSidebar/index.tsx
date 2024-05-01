@@ -3,11 +3,11 @@ import type { RootState } from "../../redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { moveToFarm } from "../../redux/features/petSlice";
 
-export const VisitSidebar = () => {
+export const PetSidebar = () => {
   const petsInStock = useSelector((state: RootState) => state.pet.petsInStock);
   const dispatch = useDispatch();
   return (
-    <div className="visit-sidebar">
+    <div className="pet-sidebar">
       <div className="zoo-box-list">
         {petsInStock.map((pet, index) => (
           <div

@@ -3,7 +3,8 @@ export interface ISidebarLayout {
 }
 
 export enum SidebarType {
-  VISIT = "VISIT",
+  DASHBOARD = 'DASHBOARD',
+  PET = "PET",
   B = "B",
   C = "C",
 }
