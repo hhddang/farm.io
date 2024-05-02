@@ -1,10 +1,10 @@
 .dashboard-sidebar {
   width: 400px;
   height: 100%;
-  padding: 15px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
 
   .top-line {
     display: flex;
@@ -20,13 +20,16 @@
       display: flex;
       align-items: center;
       gap: 8px;
+
       .image {
         width: 36px;
       }
+
       .name {
         color: rgb(var(--secondary));
         font-weight: bold;
         font-size: 16px;
+
         .io {
           color: rgb(var(--primary));
         }
@@ -36,7 +39,7 @@
 
   section .title {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
     color: rgb(var(--primary));
     border-bottom: 1px solid rgb(var(--secondary));
     margin-bottom: 13px;
@@ -47,11 +50,11 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
 
       .reward {
         background: white;
-        border-radius: 20px;
+        border-radius: 15px;
         padding: 5px;
         display: flex;
         flex-direction: column;
@@ -87,24 +90,29 @@
   section.active-chest {
     .content {
       background: white;
-      border-radius: 20px;
-      padding: 0 16px;
+      border-radius: 15px;
+      padding: 0 10px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
+
       img {
         width: 130px;
+
         &:hover {
           animation: shake 0.5s infinite;
         }
       }
+
       .text {
         text-align: center;
+
         .percent {
           font-weight: bold;
           font-size: 45px;
           color: rgb(var(--primary));
         }
+
         .guide {
           font-size: 12px;
         }
@@ -117,18 +125,22 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+
     .content {
       background: white;
       padding: 8px;
       flex: 1;
       overflow-y: auto;
       font-size: 14px;
+
       .event {
         color: #0176ff;
       }
+
       .farm {
         color: #00b13c;
       }
+
       .warning {
         color: #ff0404;
       }
