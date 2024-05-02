@@ -5,6 +5,7 @@ import {
   PetSidebar,
   SidebarB,
   SidebarC,
+  Navigation
 } from "../../components";
 import { useEffect, useState } from "react";
 import { setPetsInStock, setPetsInFarm } from "../../redux/features/petSlice";
@@ -17,18 +18,11 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
     SidebarType.DASHBOARD
   );
 
-  const [hideSidebar, setHideSidebar] = useState<boolean>(false);
-
-  const handleSetSidebarType = (sidebarType: SidebarType) => {
-    setSidebarType(sidebarType);
-    if (hideSidebar) {
-      toggleSidebar();
-    }
-  };
-
   const toggleSidebar = () => {
     setHideSidebar((state) => !state);
   };
+
+  const [hideSidebar, setHideSidebar] = useState<boolean>(false);
 
   useEffect(() => {
     dispatch(
@@ -56,28 +50,7 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
 
       {children}
 
-      <div className="function-list">
-        <button
-          className="function"
-          onClick={() => handleSetSidebarType(SidebarType.DASHBOARD)}>
-          a
-        </button>
-        <button
-          className="function"
-          onClick={() => handleSetSidebarType(SidebarType.PET)}>
-          b
-        </button>
-        <button
-          className="function"
-          onClick={() => handleSetSidebarType(SidebarType.B)}>
-          c
-        </button>
-        <button
-          className="function"
-          onClick={() => handleSetSidebarType(SidebarType.C)}>
-          d
-        </button>
-      </div>
+      <Navigation setSidebarType={setSidebarType} toggleSidebar={toggleSidebar} hideSidebar={hideSidebar} />
     </div>
   );
 };

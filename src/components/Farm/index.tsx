@@ -7,7 +7,8 @@ export const Farm = () => {
   const petsInFarm = useSelector((state: RootState) => state.pet.petsInFarm);
   const dispatch = useDispatch();
   return (
-    <div className="background">
+    <div className="farm">
+      <img src="assets/backgrounds/background.svg" alt="" />
       {petsInFarm.map((pet, index) => {
         return (
           <div
