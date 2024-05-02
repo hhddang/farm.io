@@ -1,0 +1,45 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 500 501" width="500" height="501">
+	<title>25559456_7064460</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(6.592,364.218,-819.339,14.829,490.501,-27.117)">
+			<stop offset="0" stop-color="#e6ffdc"/>
+			<stop offset=".5" stop-color="#a6d700"/>
+			<stop offset="1" stop-color="#0b3f00"/>
+		</linearGradient>
+		<linearGradient id="g2" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-242.313,226.74,-191.468,-204.619,475.205,156.422)">
+			<stop offset="0" stop-color="#e6ffdc"/>
+			<stop offset=".5" stop-color="#a6d700"/>
+			<stop offset="1" stop-color="#0b3f00"/>
+		</linearGradient>
+		<linearGradient id="g3" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(11.553,1020.523,-920.957,10.426,389.556,-148.181)">
+			<stop offset="0" stop-color="#cfb7ff"/>
+			<stop offset=".33" stop-color="#7443dc"/>
+			<stop offset=".66" stop-color="#4a2792"/>
+			<stop offset="1" stop-color="#140025"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: transparent } 
+		.s1 { fill: url(#g1) } 
+		.s2 { fill: url(#g2) } 
+		.s3 { fill: url(#g3) } 
+		.s4 { opacity: .2;mix-blend-mode: multiply;fill: #4a2792 } 
+		.s5 { mix-blend-mode: soft-light;fill: #ffffff } 
+	</style>
+	<g id="BACKGROUND">
+		<path id="&lt;Path&gt;" class="s0" d="m500 500h-500v-500h500z"/>
+	</g>
+	<g id="OBJECTS">
+		<g id="&lt;Group&gt;">
+			<g id="&lt;Group&gt;">
+				<path id="&lt;Path&gt;" fill-rule="evenodd" class="s1" d="m235.7 100.4c7.9-26 22-50 40.7-69.7 10-10.6 27.8-5.7 31.1 8.5 7 30.1 10.3 61.1 4.9 91.4-5.4 30.1-20.6 59.6-44.8 78.8-9.4 7.4-22.8 18.6-29.5 3.6-6.2-13.8-8.1-32.8-9.3-47.6-1.8-21.8 0.5-44 6.9-65z"/>
+				<path id="&lt;Path&gt;" fill-rule="evenodd" class="s2" d="m332.5 216.8c-24.8 11-52.2 15.9-79.3 14.6-14.6-0.7-22.6-17.4-13.9-29.2 18.3-24.9 39.6-47.6 66.1-63.2 26.4-15.6 58.7-23.3 89-17.4 11.8 2.2 29 5.1 21.9 20.1-6.4 13.6-19.5 27.4-30 38-15.4 15.5-33.7 28.3-53.8 37.1z"/>
+			</g>
+			<g id="&lt;Group&gt;">
+				<path id="&lt;Path&gt;" fill-rule="evenodd" class="s3" d="m425.6 316c0 96.9-95.4 158.6-192.3 158.6-96.9 0-158.3-102.6-158.3-199.5 0-96.9 80.9-116.9 177.8-116.9 96.9 0 172.8 60.9 172.8 157.8z"/>
+				<path id="&lt;Path&gt;" fill-rule="evenodd" class="s4" d="m353 184.4c9.1 20.5 15 42.4 15.8 65 1.8 49.5-23.4 101.3-67.8 123.1-33.9 16.7-73.9 14.8-111.1 8.8-32-5.1-64-12.9-96.3-13.6 25.2 60.2 74.4 106.9 139.7 106.9 96.9 0 192.3-61.7 192.3-158.6 0-59.2-28.4-105-72.6-131.6z"/>
+				<path id="&lt;Path&gt;" fill-rule="evenodd" class="s5" d="m144.2 189.7c-23.6 12-42.8 34.1-47.6 60.1-1.4 8.1-1.2 17.4 4.4 23.4 5.7 6.2 15.1 7.1 23.5 6.6 34-1.7 67-18.7 88.1-45.4 10.3-13.1 24.3-45.9 2.8-56.4-9-4.4-22.8-1.7-32.3-0.3-13.5 1.9-26.7 5.7-38.9 12z"/>
+			</g>
+		</g>
+	</g>
+</svg>

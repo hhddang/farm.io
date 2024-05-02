@@ -1,6 +1,11 @@
 import "./style.scss";
 import { type ISidebarLayout, SidebarType } from "./types";
-import { VisitSidebar, SidebarB, SidebarC } from "../../components";
+import {
+  DashboardSidebar,
+  PetSidebar,
+  SidebarB,
+  SidebarC,
+} from "../../components";
 import { useEffect, useState } from "react";
 import { setPetsInStock, setPetsInFarm } from "../../redux/features/petSlice";
 import { useDispatch } from "react-redux";
@@ -9,7 +14,7 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
   const dispatch = useDispatch();
 
   const [sidebarType, setSidebarType] = useState<SidebarType>(
-    SidebarType.VISIT
+    SidebarType.DASHBOARD
   );
 
   const [hideSidebar, setHideSidebar] = useState<boolean>(false);
@@ -37,7 +42,8 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
   return (
     <div className="sidebar-layout">
       <div className={`sidebar-wrapper ${hideSidebar ? "hide" : ""}`}>
-        {sidebarType === SidebarType.VISIT && <VisitSidebar />}
+        {sidebarType === SidebarType.DASHBOARD && <DashboardSidebar />}
+        {sidebarType === SidebarType.PET && <PetSidebar />}
         {sidebarType === SidebarType.B && <SidebarB />}
         {sidebarType === SidebarType.C && <SidebarC />}
 
@@ -53,18 +59,23 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
       <div className="function-list">
         <button
           className="function"
-          onClick={() => handleSetSidebarType(SidebarType.VISIT)}>
+          onClick={() => handleSetSidebarType(SidebarType.DASHBOARD)}>
           a
         </button>
         <button
           className="function"
-          onClick={() => handleSetSidebarType(SidebarType.B)}>
+          onClick={() => handleSetSidebarType(SidebarType.PET)}>
           b
         </button>
         <button
           className="function"
-          onClick={() => handleSetSidebarType(SidebarType.C)}>
+          onClick={() => handleSetSidebarType(SidebarType.B)}>
           c
+        </button>
+        <button
+          className="function"
+          onClick={() => handleSetSidebarType(SidebarType.C)}>
+          d
         </button>
       </div>
     </div>
