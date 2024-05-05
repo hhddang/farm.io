@@ -1,0 +1,48 @@
+.iceye {
+  width: 100px;
+  height: 100px;
+  position: relative;
+
+  .body {
+    width: 100%;
+    height: 100%;
+    .body-a {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 80px solid aqua;
+    }
+    .body-b {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-top: 80px solid aqua;
+      position: absolute;
+      top: 20px;
+    }
+  }
+
+  .eye {
+    position: absolute;
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      aspect-ratio: 1 / 1;
+      background: black;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+  }
+}

@@ -5,18 +5,17 @@ import {
   PetSidebar,
   SidebarB,
   SidebarC,
-  Navigation
+  Navigation,
 } from "../../components";
 import { useEffect, useState } from "react";
 import { setPetsInStock, setPetsInFarm } from "../../redux/features/petSlice";
 import { useDispatch } from "react-redux";
+import { PETS_IN_FARM, PETS_IN_STOCK } from "./mock-data";
 
 export const SidebarLayout = ({ children }: ISidebarLayout) => {
   const dispatch = useDispatch();
 
-  const [sidebarType, setSidebarType] = useState<SidebarType>(
-    SidebarType.DASHBOARD
-  );
+  const [sidebarType, setSidebarType] = useState<SidebarType>(SidebarType.PET);
 
   const toggleSidebar = () => {
     setHideSidebar((state) => !state);
@@ -25,12 +24,8 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
   const [hideSidebar, setHideSidebar] = useState<boolean>(false);
 
   useEffect(() => {
-    dispatch(
-      setPetsInStock([{ id: "pet-1" }, { id: "pet-2" }, { id: "pet-3" }])
-    );
-    dispatch(
-      setPetsInFarm([{ id: "pet-4" }, { id: "pet-5" }, { id: "pet-6" }])
-    );
+    dispatch(setPetsInStock(PETS_IN_STOCK));
+    dispatch(setPetsInFarm(PETS_IN_FARM));
   }, []);
 
   return (
@@ -50,7 +45,11 @@ export const SidebarLayout = ({ children }: ISidebarLayout) => {
 
       {children}
 
-      <Navigation setSidebarType={setSidebarType} toggleSidebar={toggleSidebar} hideSidebar={hideSidebar} />
+      <Navigation
+        setSidebarType={setSidebarType}
+        toggleSidebar={toggleSidebar}
+        hideSidebar={hideSidebar}
+      />
     </div>
   );
 };
