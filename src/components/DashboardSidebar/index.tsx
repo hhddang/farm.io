@@ -39,7 +39,7 @@ export const DashboardSidebar = () => {
       <section className="active-chest">
         <p className="title">Active Chest</p>
         <div className="content">
-          <img src="assets/items/chest.svg" alt="chest" />
+          <img src="assets/icons/chest.svg" alt="chest" />
           <div className="text">
             <span className="percent">50%</span>
             <p className="guide">
